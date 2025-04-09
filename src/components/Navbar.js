@@ -6,7 +6,7 @@ import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
 	return (
-		<div className="sticky top-0 flex justify-between bg-none p-8 z-0">
+		<div className="sticky top-0 flex justify-between bg-none p-8 z-40">
 			<div className="text-3xl">
 				<div>
 					<Link href="/">
