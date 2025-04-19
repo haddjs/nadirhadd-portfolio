@@ -10,7 +10,7 @@ export default function Home() {
 		<div className="flex flex-col">
 			<Navbar />
 			<main className="flex min-h-screen">
-				<div className="md:w-[200px] sticky">
+				<div className="hidden md:block md:w-[200px] sticky">
 					<NavLinks />
 				</div>
 				<div className="flex-grow flex-col flex justify-center items-center gap-10">
@@ -23,6 +23,7 @@ export default function Home() {
 						<h1 className="text-5xl font-semibold">Experience</h1>
 						<Experience />
 					</section>
+					<Separator className="my-4 h-2" />
 					<section id="projects">
 						<h1 className="text-5xl font-semibold">Projects</h1>
 						<Projects />
