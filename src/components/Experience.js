@@ -13,12 +13,12 @@ const Experience = () => {
 	return (
 		<div className="flex my-10">
 			<div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-7xl mx-auto gap-10">
-				<Card className="flex justify-between shadow-2xl dark:bg-[#0d1017] border-none px-6 py-7">
+				<Card className="flex justify-between w-full max-w-[90%] md:max-w-full mx-auto inset-shadow-sm shadow-2xl dark:bg-[#0d1017] border-none px-6 py-7">
 					<CardHeader>
-						<CardTitle className="text-2xl">
+						<CardTitle className="text-lg md:text-2xl">
 							Yayasan Pendidikan Telkom
 						</CardTitle>
-						<CardDescription className="text-lg">
+						<CardDescription className="text-sm md:text-lg">
 							June 2024 - August 2024
 						</CardDescription>
 					</CardHeader>
@@ -32,23 +32,27 @@ const Experience = () => {
 						</span>
 					</CardContent>
 					<CardFooter>
-						<div className="flex justify-between mt-5">
-							<div className="flex gap-5">
-								<div className="bg-[#eee] dark:bg-[#303030] px-5 py-2 rounded-lg">
-									VueJS
-								</div>
-								<div className="bg-[#eee] dark:bg-[#303030] px-5 py-2 rounded-lg">
-									NuxtJS
-								</div>
+						<div className="grid grid-cols-3 md:grid-cols-4 text-center gap-3 text-sm md:text-md">
+							<div className="bg-[#eee] flex justify-center items-center dark:bg-[#303030] px-5 py-2 rounded-lg">
+								VueJS
+							</div>
+							<div className="bg-[#eee] flex justify-center items-center dark:bg-[#303030] px-5 py-2 rounded-lg">
+								NuxtJS
+							</div>
+							<div className="bg-[#eee] flex justify-center items-center dark:bg-[#303030] px-5 py-2 rounded-lg">
+								Bootstrap
+							</div>
+							<div className="bg-[#eee] flex justify-center items-center dark:bg-[#303030] px-5 py-2 rounded-lg">
+								Axios
 							</div>
 						</div>
 					</CardFooter>
 				</Card>
 
-				<Card className="flex justify-between shadow-2xl dark:bg-[#0d1017] border-none px-6 py-7">
+				<Card className="flex justify-between w-full max-w-[90%] md:max-w-full mx-auto inset-shadow-sm shadow-2xl dark:bg-[#0d1017] border-none px-6 py-7">
 					<CardHeader>
-						<CardTitle className="text-2xl">Rastek ID</CardTitle>
-						<CardDescription className="text-lg">
+						<CardTitle className="text-lg md:text-2xl">Rastek ID</CardTitle>
+						<CardDescription className="text-sm md:text-lg">
 							December 2024 - Present
 						</CardDescription>
 					</CardHeader>
@@ -62,14 +66,12 @@ const Experience = () => {
 						</span>
 					</CardContent>
 					<CardFooter>
-						<div className="flex justify-between mt-5">
-							<div className="flex gap-5">
-								<div className="bg-[#a8a8a8] dark:bg-[#303030] px-5 py-2 rounded-lg">
-									ReactJS
-								</div>
-								<div className="bg-[#a8a8a8] dark:bg-[#303030] px-5 py-2 rounded-lg">
-									Bootstrap
-								</div>
+						<div className="grid grid-cols-3 md:grid-cols-4 text-center gap-3 text-sm md:text-md">
+							<div className="bg-[#eee] flex justify-center items-center dark:bg-[#303030] px-5 py-2 rounded-lg">
+								ReactJS
+							</div>
+							<div className="bg-[#eee] flex justify-center items-center dark:bg-[#303030] px-5 py-2 rounded-lg">
+								Bootstrap
 							</div>
 						</div>
 					</CardFooter>

@@ -34,22 +34,30 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<div className="sticky top-0 left-0 backdrop-blur-md bg/30 mask-alpha mask-b-from-50% mask-b-to-transparent flex justify-between bg-none p-8 z-40">
-			<div className="text-2xl md:text-3xl">
+		<div className="sticky top-0 left-0 backdrop-blur-lg bg/30 md:flex md:justify-between p-6 z-40 grid grid-cols-3">
+			<div className="hidden md:flex items-center text-3xl">
 				<Link href="/">
 					nadir<span className="font-semibold">hadd.</span>
 				</Link>
 			</div>
 
-			<div className="block md:hidden text-sm uppercase tracking-wider text-foreground font-semibold">
+			<div className="flex md:hidden justify-center items-center text-sm uppercase tracking-wider text-foreground font-semibold">
 				{currentSection}
 			</div>
 
-			<div className="flex items-center gap-3">
+			<div className="md:hidden flex items-center justify-center text-xl">
+				<Link href="/">
+					n<span className="font-semibold">h.</span>
+				</Link>
+			</div>
+
+			<div className="flex items-center justify-center gap-2">
 				<div>
 					<ThemeToggle />
 				</div>
-				<Link href="https://www.instagram.com/hadd.js">
+				<Link
+					href="https://www.instagram.com/hadd.js"
+					className="hidden md:block">
 					<Instagram
 						fontSize="large"
 						className="dark:hover:bg-white dark:hover:text-black rounded-lg transition-all duration-300"
