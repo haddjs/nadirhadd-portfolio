@@ -57,14 +57,20 @@ const Navbar = () => {
 				</div>
 				<Link
 					href="https://www.instagram.com/hadd.js"
-					className="hidden md:block">
+					className="hidden md:block"
+					target="_blank">
 					<Instagram
 						fontSize="large"
-						className="dark:hover:bg-white dark:hover:text-black rounded-lg transition-all duration-300"
+						className="hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black rounded-lg transition-all duration-300"
 					/>
 				</Link>
-				<Link href="https://www.linkedin.com/in/nadir-septian-hadiansyah-06281a225/">
-					<LinkedIn fontSize="large" />
+				<Link
+					href="https://www.linkedin.com/in/nadir-septian-hadiansyah-06281a225/"
+					target="_blank">
+					<LinkedIn
+						fontSize="large"
+						className="hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black rounded-lg transition-all duration-300"
+					/>
 				</Link>
 			</div>
 		</div>

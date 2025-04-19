@@ -6,7 +6,7 @@ import { Separator } from "./ui/separator";
 
 const Footer = () => {
 	return (
-		<div className="bg-black dark:bg-white text-white dark:text-black transition-all ease-in-out">
+		<div className="bg-black dark:bg-[#0a0d14] text-white transition-all ease-in-out">
 			<div className="p-6 pt-8">
 				<div className="text-2xl md:text-4xl">
 					<Link
@@ -20,19 +20,22 @@ const Footer = () => {
 					<div className="flex flex-col items-start mx-auto gap-4">
 						<Link
 							href="https://www.instagram.com/hadd.js"
-							className="flex items-center gap-3 border-l-0 hover:border-l-4 transition-all ps-2">
+							className="flex items-center gap-3 border-l-0 hover:border-l-4 transition-all ps-2"
+							target="_blank">
 							<Instagram fontSize="large" className="rounded-lg" />
 							<span>Instagram</span>
 						</Link>
 						<Link
 							href="https://www.linkedin.com/in/nadir-septian-hadiansyah-06281a225/"
-							className="flex items-center gap-3 border-l-0 hover:border-l-4 transition-all ps-2">
+							className="flex items-center gap-3 border-l-0 hover:border-l-4 transition-all ps-2"
+							target="_blank">
 							<LinkedIn fontSize="large" />
 							<span>LinkedIn</span>
 						</Link>
 						<Link
 							href="https://github.com/haddjs"
-							className="flex items-center gap-3 border-l-0 hover:border-l-4 transition-all ps-2">
+							className="flex items-center gap-3 border-l-0 hover:border-l-4 transition-all ps-2"
+							target="_blank">
 							<GitHub fontSize="large" />
 							<span>GitHub</span>
 						</Link>

@@ -88,6 +88,10 @@
 	--sidebar-ring: oklch(0.556 0 0);
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: "Montserrat", sans-serif;
 	transition: background 0.3s ease, color 0.3s ease;
