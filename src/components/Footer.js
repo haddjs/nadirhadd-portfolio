@@ -20,23 +20,23 @@ const Footer = () => {
 					<div className="flex flex-col items-start mx-auto gap-4">
 						<Link
 							href="https://www.instagram.com/hadd.js"
-							className="flex items-center gap-3 border-l-0 hover:border-l-4 transition-all ps-2"
+							className="flex items-center gap-3 text-sm md:text-lg border-l-0 hover:border-l-4 transition-all ps-2"
 							target="_blank">
-							<Instagram fontSize="large" className="rounded-lg" />
+							<Instagram fontSize="medium" className="rounded-lg" />
 							<span>Instagram</span>
 						</Link>
 						<Link
 							href="https://www.linkedin.com/in/nadir-septian-hadiansyah-06281a225/"
-							className="flex items-center gap-3 border-l-0 hover:border-l-4 transition-all ps-2"
+							className="flex items-center gap-3 text-sm md:text-lg border-l-0 hover:border-l-4 transition-all ps-2"
 							target="_blank">
-							<LinkedIn fontSize="large" />
+							<LinkedIn fontSize="medium" />
 							<span>LinkedIn</span>
 						</Link>
 						<Link
 							href="https://github.com/haddjs"
-							className="flex items-center gap-3 border-l-0 hover:border-l-4 transition-all ps-2"
+							className="flex items-center gap-3 text-sm md:text-lg border-l-0 hover:border-l-4 transition-all ps-2"
 							target="_blank">
-							<GitHub fontSize="large" />
+							<GitHub fontSize="medium" />
 							<span>GitHub</span>
 						</Link>
 					</div>
@@ -60,7 +60,7 @@ const Footer = () => {
 				</div>
 				<Separator className="mt-10" />
 				<div className="text-center md:text-right pt-8">
-					<span className="text-lg">nadirhadd &copy; 2025.</span>
+					<span className="text-sm md:text-lg">nadirhadd &copy; 2025.</span>
 				</div>
 			</div>
 		</div>
