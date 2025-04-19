@@ -50,15 +50,19 @@ const Projects = () => {
 								FlowLovedSome Money Management
 							</CardTitle>
 							<div className="text-sm md:text-md">
-								<button className="hover:text-white bg-[#eee] dark:bg-[#303030] hover:bg-[#b3b3b3] dark:hover:bg-[#1d1d1d] transition-all ease-in-out px-5 py-2 rounded-lg cursor-pointer">
+								<button
+									className="text-black/30 dark:text-white/30 bg-[#eee] dark:bg-[#4b4b4b] transition-all ease-in-out px-5 py-2 rounded-lg"
+									disabled>
 									Try Demo
 								</button>
+								{/*  hover:bg-[#b3b3b3] dark:hover:bg-[#1d1d1d] */}
 							</div>
 							<span className="text-sm/7">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Quibusdam consectetur, repudiandae repellendus a eius, quod
-								deserunt nobis, nulla ea fugiat velit quisquam. Voluptate, natus
-								voluptates ipsum doloremque distinctio alias iusto.
+								Web based app for tracking cashflow and revenue makes this app
+								suits for business owner. Add income or expenses easily and
+								check the transaction logs. User also able to see real-time
+								cashflow displayed in chart. Built with Next JS, TailwindCSS,
+								and Firebase.
 							</span>
 							<div className="flex flex-wrap justify-between">
 								<div className="grid grid-cols-3 md:grid-cols-4 text-center gap-3 text-sm md:text-md">
@@ -66,7 +70,13 @@ const Projects = () => {
 										ReactJS
 									</div>
 									<div className="bg-[#eee] flex justify-center items-center dark:bg-[#303030] px-5 py-2 rounded-lg">
-										Bootstrap
+										NextJS
+									</div>
+									<div className="bg-[#eee] flex justify-center items-center dark:bg-[#303030] px-5 py-2 rounded-lg">
+										TailwindCSS
+									</div>
+									<div className="bg-[#eee] flex justify-center items-center dark:bg-[#303030] px-5 py-2 rounded-lg">
+										Firebase
 									</div>
 								</div>
 							</div>
