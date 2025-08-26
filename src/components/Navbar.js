@@ -11,19 +11,19 @@ const Navbar = () => {
 	useEffect(() => {
 		const handleScroll = () => {
 			const sections = ["about", "experience", "projects"];
-			let current = "about";
+			let current = sections[0];
+			let minOffset = Infinity;
 
-			for (const id of sections) {
+			sections.forEach((id) => {
 				const el = document.getElementById(id);
 				if (el) {
-					const rect = el.getBoundingClientRect();
-					if (rect.top <= 100 && rect.bottom >= 100) {
+					const offset = Math.abs(el.getBoundingClientRect().top - 120);
+					if (offset < minOffset) {
+						minOffset = offset;
 						current = id;
-						break;
 					}
 				}
-			}
-
+			});
 			setCurrentSection(current);
 		};
 
@@ -34,7 +34,7 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<div className="sticky top-0 left-0 backdrop-blur-lg bg/30 md:flex md:justify-between p-6 z-40 grid grid-cols-3">
+		<div className="sticky top-0 left-0 backdrop-blur-lg bg/30 md:flex md:justify-between md:px-30 md:py-10 p-6 z-40 grid grid-cols-3">
 			<div className="hidden md:flex items-center text-3xl">
 				<Link href="/">
 					nadir<span className="font-semibold">hadd.</span>

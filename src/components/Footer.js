@@ -6,7 +6,7 @@ import { Separator } from "./ui/separator";
 
 const Footer = () => {
 	return (
-		<div className="bg-black dark:bg-[#0a0d14] text-white transition-all ease-in-out">
+		<div className="bg-black dark:bg-[#0a0d14] text-white transition-all ease-in-out mt-20">
 			<div className="p-6 pt-8">
 				<div className="text-2xl md:text-4xl">
 					<Link

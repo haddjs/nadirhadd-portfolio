@@ -15,24 +15,15 @@ export default function Home() {
 					<NavLinks />
 				</div>
 				<div className="flex-grow flex-col flex justify-center items-center gap-10">
-					<section id="about">
-						<h1 className="text-2xl md:text-5xl font-semibold text-center md:text-left">
-							About
-						</h1>
+					<section id="about" className="scroll-mt-28">
 						<Hero />
 					</section>
 					<Separator className="my-4 h-2" />
-					<section id="experience">
-						<h1 className="text-2xl md:text-5xl font-semibold text-center md:text-left">
-							Experience
-						</h1>
+					<section id="experience" className="scroll-mt-28">
 						<Experience />
 					</section>
-					<Separator className="md:my-4 h-2" />
-					<section id="projects">
-						<h1 className="text-2xl md:text-5xl font-semibold text-center md:text-left">
-							Projects
-						</h1>
+					<Separator className="my-4 h-2" />
+					<section id="projects" className="scroll-mt-28">
 						<Projects />
 					</section>
 				</div>
