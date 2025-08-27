@@ -17,7 +17,7 @@ const Navbar = () => {
 			sections.forEach((id) => {
 				const el = document.getElementById(id);
 				if (el) {
-					const offset = Math.abs(el.getBoundingClientRect().top - 120);
+					const offset = Math.abs(el.getBoundingClientRect().top - 100);
 					if (offset < minOffset) {
 						minOffset = offset;
 						current = id;
@@ -34,7 +34,7 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<div className="sticky top-0 left-0 backdrop-blur-lg bg/30 md:flex md:justify-between md:px-30 md:py-10 p-6 z-40 grid grid-cols-3">
+		<div className="md:sticky fixed w-screen top-0 left-0 backdrop-blur bg/30 md:flex md:justify-between md:px-30 md:py-10 p-6 z-40 grid grid-cols-3">
 			<div className="hidden md:flex items-center text-3xl">
 				<Link href="/">
 					nadir<span className="font-semibold">hadd.</span>

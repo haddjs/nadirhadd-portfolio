@@ -36,15 +36,17 @@ const Experience = () => {
 								<span className="text-sm/7">{exp.expDescription}</span>
 							</CardContent>
 							<CardFooter>
-								{exp.expTech.map((tech, i) => (
-									<div
-										key={i}
-										className="flex text-center px-2 text-sm md:text-md">
-										<Button variant="secondary" size="lg">
+								<div className="grid grid-cols-3 gap-4 md:flex text-center md:px-2 text-sm md:text-md">
+									{exp.expTech.map((tech, i) => (
+										<Button
+											key={i}
+											variant="secondary"
+											size="lg"
+											className="text-xs">
 											{tech}
 										</Button>
-									</div>
-								))}
+									))}
+								</div>
 							</CardFooter>
 						</Card>
 					))}

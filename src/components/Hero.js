@@ -33,7 +33,7 @@ const Hero = () => {
 							/>
 						</h2>
 						<p className="text-md md:text-lg text-muted-foreground max-w-lg">
-							I’m a developer who codes like Eren Yeager at 2AM but still makes
+							I&apos;m a developer fueled by coffee and chips to makes
 							everything clean and modern. I laugh at my own pain, overthink my
 							pixels, and make sure every line of code feels like a vibe.
 							Somewhere between deep midnight thoughts and screaming in{" "}

@@ -33,7 +33,7 @@ const Projects = () => {
 									</CardTitle>
 									<div className="text-sm md:text-md">
 										{items.url ? (
-											<button className="text-black font-semibold dark:text-white/30 bg-[#eee] dark:bg-[#4b4b4b] transition-all ease-in-out px-5 py-2 rounded-lg">
+											<button className="text-black font-semibold dark:text-white bg-[#eee] dark:bg-[#4b4b4b] transition-all ease-in-out px-5 py-2 rounded-lg">
 												<a href={items.url} target="_blank">
 													Visit
 												</a>
@@ -48,15 +48,17 @@ const Projects = () => {
 									</div>
 									<span className="text-sm/7">{items.description}</span>
 									<div className="flex flex-wrap">
-										{items.tech.map((projectTech, index) => (
-											<div
-												key={index}
-												className="flex text-center px-2 text-sm md:text-md">
-												<Button variant="secondary" size="lg">
+										<div className="grid grid-cols-3 gap-4 md:flex text-center px-2 text-sm md:text-md">
+											{items.tech.map((projectTech, index) => (
+												<Button
+													key={index}
+													variant="secondary"
+													size="lg"
+													className="text-xs">
 													{projectTech}
 												</Button>
-											</div>
-										))}
+											))}
+										</div>
 									</div>
 								</div>
 								<Carousel className="flex-1 flex items-center w-full max-w-4xl mx-auto">
