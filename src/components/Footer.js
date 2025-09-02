@@ -26,7 +26,7 @@ const Footer = () => {
 							<span>Instagram</span>
 						</Link>
 						<Link
-							href="https://www.linkedin.com/in/nadir-septian-hadiansyah-06281a225/"
+							href="https://www.linkedin.com/in/haddjs/"
 							className="flex items-center gap-3 text-sm md:text-lg border-l-0 hover:border-l-4 transition-all ps-2"
 							target="_blank">
 							<LinkedIn fontSize="medium" />

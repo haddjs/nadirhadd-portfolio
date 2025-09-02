@@ -33,11 +33,11 @@ const Projects = () => {
 									</CardTitle>
 									<div className="text-sm md:text-md">
 										{items.url ? (
-											<button className="text-black font-semibold dark:text-white bg-[#eee] dark:bg-[#4b4b4b] transition-all ease-in-out px-5 py-2 rounded-lg">
-												<a href={items.url} target="_blank">
+											<a href={items.url} target="_blank">
+												<Button className="text-black font-semibold dark:text-white bg-[#eee] hover:bg-[#cfcfcf] dark:bg-[#4b4b4b] hover:dark:bg-[#1f1f1f] transition-all ease-in-out px-5 py-2 rounded-lg cursor-pointer">
 													Visit
-												</a>
-											</button>
+												</Button>
+											</a>
 										) : (
 											<button
 												className="text-black/30 dark:text-white/30 bg-[#eee] dark:bg-[#4b4b4b] transition-all ease-in-out px-5 py-2 rounded-lg"

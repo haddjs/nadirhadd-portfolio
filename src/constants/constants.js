@@ -50,13 +50,31 @@ export const projects = [
 			"Figma design about bakery implemented into static website. This website have elements such as catalogue, best seller, and reviews. Built using ReactJS with NextJS as framework, alongside with TailwindCSS for styling.",
 		url: "https://lesadie.web.id/",
 	},
+	{
+		id: 3,
+		projectTitle: "List-It",
+		snapshots: [
+			{
+				source: "/assets/images/projects/project3/1.png",
+				alt: "To Do List",
+			},
+			{
+				source: "/assets/images/projects/project3/2.png",
+				alt: "Add Group",
+			},
+		],
+		tech: ["React", "NextJS", "TailwindCSS", "Shadcn"],
+		description:
+			"To-do-list app for simple notes to remind every day tasks. This website currently in version 1.2.1 with grouping list, and store the list inside local storage.",
+		url: "https://listit.vercel.app",
+	},
 ];
 
 export const experience = [
 	{
 		id: 1,
 		experienceTitle: "Yayasan Pendidikan Telkom",
-		duration: "June 2024 - August 2024",
+		duration: "Jule 2024 - August 2024",
 		expDescription:
 			"Implementing UI Design of employee's presence and account management into fully functional website using NuxtJS Javascript's framework. Other than that, building API for integrating with Backend using Axios.",
 		expTech: ["VueJS", "NuxtJS", "Bootstrap", "Axios"],
