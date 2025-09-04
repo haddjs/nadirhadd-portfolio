@@ -48,7 +48,7 @@ export const projects = [
 		tech: ["React", "NextJS", "TailwindCSS"],
 		description:
 			"Figma design about bakery implemented into static website. This website have elements such as catalogue, best seller, and reviews. Built using ReactJS with NextJS as framework, alongside with TailwindCSS for styling.",
-		url: "https://lesadie.web.id/",
+		url: "https://le-sadie-bake.vercel.app/",
 	},
 	{
 		id: 3,
