@@ -1,37 +1,40 @@
 import "./globals.css";
 import { ThemeProviderWrapper } from "@/components/theme-provider";
-import { Poppins, Montserrat } from "next/font/google";
+import SmoothScroll from "@/components/SmoothScroll";
+import { Space_Grotesk, DM_Sans } from "next/font/google";
 
-const poppins = Poppins({
-	variable: "--font-poppins",
-	subsets: ["latin"],
-	weight: ["300", "600", "700"],
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const montserrat = Montserrat({
-	variable: "--font-montserrat",
-	subsets: ["latin"],
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata = {
-	title: "nadirhadd's portfolio",
-	description: "Made with Love by Nadir",
+  title: "Nadir Hadd — Front-end Developer & Creative Technologist",
+  description:
+    "Portfolio of Nadir Septian Hadiansyah — front-end developer building interfaces, design systems, and web applications.",
 };
 
 export default function RootLayout({ children }) {
-	return (
-		<html lang="en" suppressHydrationWarning>
-			<body
-				className={`${poppins.variable} ${montserrat.variable} antialiased`}>
-				<div className="transition-color duration-300">
-					<ThemeProviderWrapper
-						attribute="class"
-						defaultTheme="system"
-						enableSystem>
-						{children}
-					</ThemeProviderWrapper>
-				</div>
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en" suppressHydrationWarning className="lenis">
+      <body
+        className={`${spaceGrotesk.variable} ${dmSans.variable} font-sans antialiased`}
+      >
+        <ThemeProviderWrapper
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+        >
+          <SmoothScroll>{children}</SmoothScroll>
+        </ThemeProviderWrapper>
+      </body>
+    </html>
+  );
 }
