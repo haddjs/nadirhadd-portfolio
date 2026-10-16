@@ -1,5 +1,3 @@
-"use client";
-
 import Navbar from "@/components/Navbar";
 import EditorialHero from "@/components/Hero/EditorialHero";
 import StackedWorkSection from "@/components/Work/StackedWorkSection";

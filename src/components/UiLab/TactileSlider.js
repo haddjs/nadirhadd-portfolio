@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function TactileSlider() {
   const [value, setValue] = useState(65);
@@ -12,17 +12,23 @@ export default function TactileSlider() {
         {/* Metric Display */}
         <div className="flex items-end justify-between mb-8">
           <div>
-            <span className="text-xs font-mono uppercase tracking-widest text-ink-muted">
+            <span className="text-xs font-display uppercase tracking-widest text-ink-muted">
               Intensity
             </span>
             <div className="font-display text-5xl font-light text-foreground mt-1">
               {value}
-              <span className="text-lg font-mono text-ink-muted ml-1">%</span>
+              <span className="text-lg font-display text-ink-muted ml-1">
+                %
+              </span>
             </div>
           </div>
 
-          <span className="text-xs font-mono text-emerald-500 uppercase tracking-wider">
-            {value > 75 ? "High Spring" : value > 35 ? "Balanced" : "Low Energy"}
+          <span className="text-xs font-display text-emerald-500 uppercase tracking-wider">
+            {value > 75
+              ? "High Spring"
+              : value > 35
+                ? "Balanced"
+                : "Low Energy"}
           </span>
         </div>
 
@@ -39,7 +45,7 @@ export default function TactileSlider() {
         </div>
 
         {/* Discrete magnetic tick notches */}
-        <div className="flex justify-between text-[10px] font-mono text-ink-muted mt-2">
+        <div className="flex justify-between text-[10px] font-display text-ink-muted mt-2">
           <span>00 MIN</span>
           <span>25</span>
           <span>50 MID</span>

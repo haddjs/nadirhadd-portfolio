@@ -156,7 +156,7 @@ export default function Navbar() {
                     transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
                     className="absolute left-0 top-full mt-2 w-80 rounded-xl border border-border bg-card/95 p-3 shadow-xl backdrop-blur-xl normal-case font-sans text-card-foreground"
                   >
-                    <div className="px-3 pt-1 pb-1.5 text-xs font-mono uppercase tracking-widest text-muted-foreground">
+                    <div className="px-3 pt-1 pb-1.5 text-xs font-display uppercase tracking-widest text-muted-foreground">
                       Selected Works
                     </div>
 
@@ -172,7 +172,7 @@ export default function Navbar() {
                             <span className="font-medium text-foreground group-hover:text-teal transition-colors">
                               {project.title}
                             </span>
-                            <span className="text-[10px] font-mono text-muted-foreground">
+                            <span className="text-[10px] font-display text-muted-foreground">
                               0{idx + 1}
                             </span>
                           </div>
@@ -188,7 +188,7 @@ export default function Navbar() {
                       <Link
                         href="/#work"
                         onClick={() => setWorkDropdownOpen(false)}
-                        className="flex items-center justify-between rounded-lg px-3 py-2 text-xs font-mono tracking-wider uppercase text-teal hover:bg-foreground/5 transition-colors font-semibold"
+                        className="flex items-center justify-between rounded-lg px-3 py-2 text-xs font-display tracking-wider uppercase text-teal hover:bg-foreground/5 transition-colors font-semibold"
                       >
                         <span>More projects →</span>
                         <span className="text-[10px] text-muted-foreground">
@@ -284,7 +284,7 @@ export default function Navbar() {
             transition={{ duration: 0.4, ease: [0.68, 0, 0.1, 1] }}
             className="fixed inset-0 z-40 flex flex-col justify-between bg-background/95 backdrop-blur-xl text-foreground px-8 pt-28 pb-12 md:hidden border-b border-border"
           >
-            <div className="flex flex-col gap-6 font-mono">
+            <div className="flex flex-col gap-6 font-display">
               {/* Work item with mobile expand */}
               <div>
                 <button
@@ -332,7 +332,7 @@ export default function Navbar() {
                           setIsOpen(false);
                           setMobileWorkExpanded(false);
                         }}
-                        className="pt-2 text-2xl text-teal hover:opacity-80 flex items-center justify-between font-mono"
+                        className="pt-2 text-2xl text-teal hover:opacity-80 flex items-center justify-between font-display"
                       >
                         <span>More projects →</span>
                         <span className="text-xs text-muted-foreground">
@@ -362,7 +362,7 @@ export default function Navbar() {
               ))}
             </div>
 
-            <div className="border-t border-border pt-6 text-xs font-mono text-muted-foreground">
+            <div className="border-t border-border pt-6 text-xs font-display text-muted-foreground">
               <p>Nadir Hadd — Front-end Developer</p>
               <p className="mt-1">Bandung, Indonesia (GMT+7)</p>
             </div>

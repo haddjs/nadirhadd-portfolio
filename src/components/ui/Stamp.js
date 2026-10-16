@@ -1,7 +1,7 @@
 "use client";
 
-import { useId } from "react";
 import { motion } from "framer-motion";
+import { useId } from "react";
 
 export default function Stamp({
   className = "",
@@ -41,13 +41,7 @@ export default function Stamp({
           />
 
           {/* Solid middle track */}
-          <circle
-            cx="200"
-            cy="200"
-            r="170"
-            stroke={color}
-            strokeWidth="1"
-          />
+          <circle cx="200" cy="200" r="170" stroke={color} strokeWidth="1" />
 
           {/* Circular Text Path */}
           <path
@@ -56,7 +50,7 @@ export default function Stamp({
             fill="none"
           />
           <text
-            className="text-[9.5px] uppercase font-mono tracking-[0.26em]"
+            className="text-[9.5px] uppercase font-display tracking-[0.26em]"
             fill={color}
           >
             <textPath href={`#${pathId}`} startOffset="0%">
@@ -80,18 +74,41 @@ export default function Stamp({
             stroke={irisColor}
             strokeWidth="1.5"
           />
-          <circle
-            cx="200"
-            cy="200"
-            r="6"
-            fill={irisColor}
-          />
+          <circle cx="200" cy="200" r="6" fill={irisColor} />
 
           {/* Coordinate tick marks */}
-          <line x1="200" y1="15" x2="200" y2="35" stroke={color} strokeWidth="1.5" />
-          <line x1="200" y1="365" x2="200" y2="385" stroke={color} strokeWidth="1.5" />
-          <line x1="15" y1="200" x2="35" y2="200" stroke={color} strokeWidth="1.5" />
-          <line x1="365" y1="200" x2="385" y2="200" stroke={color} strokeWidth="1.5" />
+          <line
+            x1="200"
+            y1="15"
+            x2="200"
+            y2="35"
+            stroke={color}
+            strokeWidth="1.5"
+          />
+          <line
+            x1="200"
+            y1="365"
+            x2="200"
+            y2="385"
+            stroke={color}
+            strokeWidth="1.5"
+          />
+          <line
+            x1="15"
+            y1="200"
+            x2="35"
+            y2="200"
+            stroke={color}
+            strokeWidth="1.5"
+          />
+          <line
+            x1="365"
+            y1="200"
+            x2="385"
+            y2="200"
+            stroke={color}
+            strokeWidth="1.5"
+          />
         </svg>
       </motion.div>
     </div>
