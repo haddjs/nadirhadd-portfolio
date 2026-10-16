@@ -41,10 +41,10 @@ export default function Footer({ projects = [] }) {
 
           {/* Column 1: Me */}
           <div>
-            <p className="text-xs font-mono uppercase tracking-[0.2em] text-[#666]">
+            <p className="text-xs font-display uppercase tracking-[0.2em] text-[#666]">
               Me
             </p>
-            <ul className="mt-5 space-y-3 text-sm font-mono">
+            <ul className="mt-5 space-y-3 text-sm font-display">
               <li>
                 <StaggerHoverLink
                   href="/about"
@@ -82,10 +82,10 @@ export default function Footer({ projects = [] }) {
 
           {/* Column 2: Projects */}
           <div>
-            <p className="text-xs font-mono uppercase tracking-[0.2em] text-[#666]">
+            <p className="text-xs font-display uppercase tracking-[0.2em] text-[#666]">
               Projects
             </p>
-            <ul className="mt-5 space-y-3 text-sm font-mono">
+            <ul className="mt-5 space-y-3 text-sm font-display">
               {projects.map((proj) => (
                 <li key={proj.slug}>
                   <StaggerHoverLink
@@ -101,10 +101,10 @@ export default function Footer({ projects = [] }) {
 
           {/* Column 3: Connect */}
           <div>
-            <p className="text-xs font-mono uppercase tracking-[0.2em] text-[#666]">
+            <p className="text-xs font-display uppercase tracking-[0.2em] text-[#666]">
               Connect
             </p>
-            <ul className="mt-5 space-y-3 text-sm font-mono">
+            <ul className="mt-5 space-y-3 text-sm font-display">
               <li>
                 <StaggerHoverLink
                   href="https://github.com/haddjs"
@@ -137,7 +137,7 @@ export default function Footer({ projects = [] }) {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#666]" />
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-display text-[#666]" />
       </div>
     </footer>
   );

@@ -15,10 +15,10 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
-  if (!project) return { title: "Project — Nadir Hadd" };
+  if (!project) return { title: "Project Not Found" };
   return {
-    title: `${project.title} — Nadir Hadd`,
-    description: project.description,
+    title: project.title,
+    description: project.tagline || project.description,
   };
 }
 
@@ -43,7 +43,7 @@ export default async function WorkDetailPage({ params }) {
           {/* Hero Section of the Case Study */}
           <article className="mx-auto w-full px-6 pb-24 md:px-20">
             {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-ink-muted">
+            <nav className="flex items-center gap-2 text-xs font-display uppercase tracking-wider text-ink-muted">
               <StaggerHoverLink href="/#work" className="hover:text-foreground">
                 Work
               </StaggerHoverLink>
@@ -62,7 +62,7 @@ export default async function WorkDetailPage({ params }) {
               />
 
               <div className="relative z-10 max-w-4xl">
-                <div className="flex items-center gap-3 text-xs font-mono tracking-widest text-ink-muted uppercase">
+                <div className="flex items-center gap-3 text-xs font-display tracking-widest text-ink-muted uppercase">
                   <span>{project.year}</span>
                   <span>•</span>
                   <span>{project.disciplines?.join("  /  ")}</span>
@@ -81,7 +81,7 @@ export default async function WorkDetailPage({ params }) {
                   {project.tech_stacks.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-full border border-black/10 dark:border-white/15 px-3 py-1 text-xs font-mono text-ink-muted"
+                      className="rounded-full border border-black/10 dark:border-white/15 px-3 py-1 text-xs font-display text-ink-muted"
                     >
                       {tech}
                     </span>
@@ -101,7 +101,7 @@ export default async function WorkDetailPage({ params }) {
             {/* Problem & Solution Narrative Breakdown (Joonas Sandell Style) */}
             <section className="mt-16 grid gap-12 md:grid-cols-2 border-b border-black/10 dark:border-white/10 pb-20">
               <div>
-                <span className="text-xs font-mono uppercase tracking-widest text-ink-muted">
+                <span className="text-xs font-display uppercase tracking-widest text-ink-muted">
                   The Problem & Challenge
                 </span>
                 <h2 className="font-display mt-2 text-2xl font-medium text-foreground">
@@ -113,7 +113,7 @@ export default async function WorkDetailPage({ params }) {
               </div>
 
               <div>
-                <span className="text-xs font-mono uppercase tracking-widest text-ink-muted">
+                <span className="text-xs font-display uppercase tracking-widest text-ink-muted">
                   The Solution & Engineering
                 </span>
                 <h2 className="font-display mt-2 text-2xl font-medium text-foreground">
@@ -128,14 +128,14 @@ export default async function WorkDetailPage({ params }) {
             {/* Full Visual Snapshots */}
             {project.images?.length > 0 && (
               <section className="mt-16 space-y-12">
-                <p className="text-xs font-mono uppercase tracking-widest text-ink-muted">
+                <p className="text-xs font-display uppercase tracking-widest text-ink-muted">
                   Interface Showcase
                 </p>
 
                 {project.images.map((image, index) => (
                   <figure
                     key={`${image.image_url}-${index}`}
-                    className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-black/10 dark:border-white/10 bg-black/5 shadow-2xl"
+                    className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-black/10 dark:border-white/10 bg-black/5 shadow-2xl"
                   >
                     <Image
                       src={image.image_url}
@@ -144,6 +144,7 @@ export default async function WorkDetailPage({ params }) {
                       sizes="(max-width: 1024px) 100vw, 1100px"
                       className="object-cover object-center"
                       priority={index === 0}
+                      loading="eager"
                     />
                   </figure>
                 ))}
@@ -154,16 +155,16 @@ export default async function WorkDetailPage({ params }) {
             <div className="mt-20 border-t border-black/10 dark:border-white/10 pt-10 flex items-center justify-between">
               <StaggerHoverLink
                 href="/#work"
-                className="text-xs font-mono uppercase tracking-widest text-ink-muted hover:text-foreground"
+                className="text-xs font-display uppercase tracking-widest text-ink-muted hover:text-foreground"
               >
                 ← Back to selected works
               </StaggerHoverLink>
 
-              <EnterButton
+              {/* <EnterButton
                 href="/ui-lab"
                 label="Explore UI Lab"
                 accentColor={theme.accent}
-              />
+              /> */}
             </div>
           </article>
         </WorkReveal>

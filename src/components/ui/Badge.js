@@ -8,7 +8,7 @@ export function BeaconBadge({
 }) {
   return (
     <div
-      className={`inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/15 bg-white/60 dark:bg-black/40 px-3.5 py-1 text-xs font-mono tracking-wide text-foreground backdrop-blur-md select-none ${className}`}
+      className={`inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/15 bg-white/60 dark:bg-black/40 px-3.5 py-1 text-xs font-display tracking-wide text-foreground backdrop-blur-md select-none ${className}`}
     >
       <span className="relative flex h-2 w-2">
         <span

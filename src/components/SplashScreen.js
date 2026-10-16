@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useState, useLayoutEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useLayoutEffect, useState } from "react";
 
-const useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
+const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
-const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+const CHARS =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
 
 const ScrambleText = ({ text }) => {
   const [displayText, setDisplayText] = useState(text);
@@ -16,7 +18,7 @@ const ScrambleText = ({ text }) => {
     let interval;
     let frame = 0;
     const maxFrames = 40;
-    
+
     interval = setInterval(() => {
       frame++;
       let output = "";
@@ -32,7 +34,7 @@ const ScrambleText = ({ text }) => {
         }
       }
       setDisplayText(output);
-      
+
       if (frame >= maxFrames) {
         clearInterval(interval);
       }
@@ -71,10 +73,14 @@ export default function SplashScreen() {
         <motion.div
           key="splash"
           initial={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
-          exit={shouldAnimate ? {
-            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-            transition: { duration: 0.75, ease: [0.68, 0, 0.1, 1] },
-          } : {}}
+          exit={
+            shouldAnimate
+              ? {
+                  clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+                  transition: { duration: 0.75, ease: [0.68, 0, 0.1, 1] },
+                }
+              : {}
+          }
           className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-[#0a0a0c] text-[#fbfbfb] select-none"
         >
           <div className="flex flex-col items-center text-center">
@@ -82,14 +88,18 @@ export default function SplashScreen() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.68, 0, 0.1, 1] }}
-              className="text-xs uppercase tracking-[0.28em] text-[#999] mb-2 font-mono"
+              className="text-xs uppercase tracking-[0.28em] text-[#999] mb-2 font-display"
             >
               <ScrambleText text="Portfolio of" />
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1, ease: [0.68, 0, 0.1, 1] }}
+              transition={{
+                duration: 0.7,
+                delay: 0.1,
+                ease: [0.68, 0, 0.1, 1],
+              }}
               className="text-3xl md:text-5xl font-light tracking-tight font-display mb-6"
             >
               <ScrambleText text="Nadir Hadd" />

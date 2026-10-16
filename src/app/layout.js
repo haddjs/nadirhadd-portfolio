@@ -1,7 +1,7 @@
-import "./globals.css";
-import { ThemeProviderWrapper } from "@/components/theme-provider";
 import SmoothScroll from "@/components/SmoothScroll";
-import { Space_Grotesk, DM_Sans } from "next/font/google";
+import { ThemeProviderWrapper } from "@/components/theme-provider";
+import { DM_Sans, Space_Grotesk } from "next/font/google";
+import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -16,9 +16,15 @@ const dmSans = DM_Sans({
 });
 
 export const metadata = {
-  title: "Nadir Hadd — Front-end Developer & Creative Technologist",
+  title: {
+    default: "nadirhadd",
+    template: "%s — nadirhadd",
+  },
   description:
     "Portfolio of Nadir Septian Hadiansyah — front-end developer building interfaces, design systems, and web applications.",
+  icons: {
+    icon: "/assets/images/icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {

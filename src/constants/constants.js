@@ -5,9 +5,9 @@ export const about = {
   name: "Nadir S Hadiansyah",
   short_name: "Nadha",
   role: "Full Stack Developer",
-  headline: "I design interfaces into working website.",
+  headline: "I build systems end to end.",
   bio: "Front-end developer with three internships building production React/Next.js applications, from component-driven UI to the REST APIs they consume. Comfortable turning designs into accessible, performant, type-safe interfaces.",
-  now: "Developing HRIS website for increasing my depth of engineering",
+  now: "Building an HRIS to manage employee information and workflows.",
   profile_picture: "/assets/images/profile.JPEG",
   location: "Bandung, Indonesia (GMT+7)",
   availability: "Available for full-time roles & freelance",
@@ -16,30 +16,27 @@ export const about = {
 };
 
 export const skills = {
+  backend: {
+    category: "Core Back-end & APIs",
+    items: [
+      "Node.js",
+      "Express",
+      "REST API design",
+      "Auth.js",
+      "Google OAuth2",
+    ],
+  },
   frontend: {
     category: "Core Front-end",
     items: [
       "React",
-      "Next.js (App & Pages)",
+      "Next.js",
       "TypeScript",
       "JavaScript (ES6+)",
       "HTML5 & Semantic Web",
       "CSS3 & Modern Layouts",
       "TailwindCSS v4",
-      "Sass / SCSS",
-    ],
-  },
-  architecture: {
-    category: "State & Architecture",
-    items: [
-      "Zustand",
-      "Redux Toolkit",
-      "Context API",
       "REST APIs Integration",
-      "TanStack Query",
-      "Vite",
-      "Client-side Routing",
-      "Mock APIs & Data Modeling",
     ],
   },
   motion: {
@@ -47,24 +44,21 @@ export const skills = {
     items: [
       "Framer Motion",
       "Lenis Smooth Scrolling",
-      "Micro-interactions",
       "CSS Animation & Keyframes",
       "Responsive & Fluid Typography",
       "Component Architecture",
-      "Accessibility (a11y)",
     ],
   },
   tools: {
-    category: "Design Systems & Tooling",
+    category: "Tooling",
     items: [
-      "Figma",
-      "Shadcn UI",
-      "Radix UI",
-      "Storybook",
-      "Git & GitHub Actions",
+      "Git & GitHub",
       "Vercel Deployment",
-      "Postman",
+      "Google APIs",
       "VS Code",
+      "Disco",
+      "ProM",
+      "Postman",
     ],
   },
 };
@@ -173,18 +167,15 @@ export const projects = [
     ],
     images: [
       {
-        image_url:
-          "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1600&q=80",
+        image_url: "/assets/images/projects/project4/Aulify1.png",
         alt: "Aulify personal finance and expense dashboard",
       },
       {
-        image_url:
-          "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1600&q=80",
+        image_url: "/assets/images/projects/project4/Aulify2.png",
         alt: "Aulify financial analytics and transaction metrics",
       },
       {
-        image_url:
-          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80",
+        image_url: "/assets/images/projects/project4/Aulify3.png",
         alt: "Aulify transaction breakdown and category management",
       },
     ],
@@ -224,25 +215,22 @@ export const projects = [
     ],
     images: [
       {
-        image_url:
-          "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1600&q=80",
+        image_url: "/assets/images/projects/project1/Verity2.png",
         alt: "Verity job application tracking and status dashboard",
       },
       {
-        image_url:
-          "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1600&q=80",
+        image_url: "/assets/images/projects/project1/Verity1.png",
         alt: "Verity CV repository and document management",
       },
       {
-        image_url:
-          "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+        image_url: "/assets/images/projects/project1/Verity3.jpg",
         alt: "Verity Google Sheets and Drive synchronization workflow",
       },
     ],
     theme: {
-      bg: "#1c1408",
-      border: "#3d2a0d",
-      accent: "#f59e0b",
+      bg: "#375952",
+      border: "#80EDD8",
+      accent: "#CFF6EA",
       accentLight: "#fbbf24",
       stampIris: "#f59e0b",
       textMuted: "#fde68a",

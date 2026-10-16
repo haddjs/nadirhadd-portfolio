@@ -1,7 +1,7 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const CARDS = [
   {
@@ -59,7 +59,7 @@ export default function DynamicPayButton() {
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
             onClick={() => setIsExpanded(true)}
-            className="group relative flex items-center gap-4 rounded-full bg-black text-white dark:bg-white dark:text-black px-6 py-3.5 text-xs font-mono uppercase tracking-wider shadow-xl transition-all duration-300"
+            className="group relative flex items-center gap-4 rounded-full bg-black text-white dark:bg-white dark:text-black px-6 py-3.5 text-xs font-display uppercase tracking-wider shadow-xl transition-all duration-300"
           >
             <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-ping" />
             <span>Quick Pay $49.00</span>
@@ -80,12 +80,12 @@ export default function DynamicPayButton() {
           >
             {/* Wallet Header */}
             <div className="flex items-center justify-between border-b border-black/10 dark:border-white/10 pb-3">
-              <span className="text-[11px] font-mono uppercase tracking-wider text-ink-muted">
+              <span className="text-[11px] font-display uppercase tracking-wider text-ink-muted">
                 Choose Payment Method
               </span>
               <button
                 onClick={() => setIsExpanded(false)}
-                className="text-xs font-mono text-ink-muted hover:text-foreground"
+                className="text-xs font-display text-ink-muted hover:text-foreground"
               >
                 [ESC]
               </button>
@@ -109,13 +109,15 @@ export default function DynamicPayButton() {
                         : "opacity-60 hover:opacity-90"
                     }`}
                   >
-                    <div className="flex items-center justify-between text-xs font-mono">
+                    <div className="flex items-center justify-between text-xs font-display">
                       <span>{card.name}</span>
                       <span className="font-bold">{card.badge}</span>
                     </div>
-                    <div className="mt-2 flex items-center justify-between font-mono text-sm tracking-wider">
+                    <div className="mt-2 flex items-center justify-between font-display text-sm tracking-wider">
                       <span>{card.number}</span>
-                      <span className="text-[10px] opacity-75">{card.expiry}</span>
+                      <span className="text-[10px] opacity-75">
+                        {card.expiry}
+                      </span>
                     </div>
                   </motion.div>
                 );
@@ -125,14 +127,16 @@ export default function DynamicPayButton() {
             {/* Total and Confirmation */}
             <div className="mt-6 pt-4 border-t border-black/10 dark:border-white/10 flex items-center justify-between">
               <div>
-                <p className="text-[10px] font-mono text-ink-muted uppercase">Total</p>
+                <p className="text-[10px] font-display text-ink-muted uppercase">
+                  Total
+                </p>
                 <p className="font-display text-lg font-medium">$49.00 USD</p>
               </div>
 
               <button
                 onClick={handlePay}
                 disabled={paymentStatus !== "idle"}
-                className="rounded-full bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 text-xs font-mono uppercase tracking-wider transition-all disabled:opacity-50"
+                className="rounded-full bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 text-xs font-display uppercase tracking-wider transition-all disabled:opacity-50"
               >
                 {paymentStatus === "idle" && "Confirm & Pay"}
                 {paymentStatus === "processing" && "Authorizing..."}

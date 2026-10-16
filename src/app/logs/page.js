@@ -1,9 +1,13 @@
-"use client";
-
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { StaggerHoverLink } from "@/components/ui/StaggerHoverLink";
 import { feedItems, projects } from "@/constants/constants";
+
+export const metadata = {
+  title: "Logs",
+  description:
+    "A stream of work in progress, component prototypes, production shipments, and design notes.",
+};
 
 export default function FeedPage() {
   return (
@@ -13,7 +17,7 @@ export default function FeedPage() {
       <main className="flex-1 pt-28 md:pt-36 pb-20">
         <article className="mx-auto w-full px-6 md:px-20">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-ink-muted">
+          <div className="flex items-center gap-2 text-xs font-display uppercase tracking-wider text-ink-muted">
             <StaggerHoverLink href="/" className="hover:text-foreground">
               Home
             </StaggerHoverLink>
@@ -23,7 +27,7 @@ export default function FeedPage() {
 
           {/* Header */}
           <header className="mt-10 border-b border-black/10 dark:border-white/10 pb-16">
-            <p className="text-xs font-mono uppercase tracking-[0.24em] text-ink-muted">
+            <p className="text-xs font-display uppercase tracking-[0.24em] text-ink-muted">
               Live Log & Stream
             </p>
             <h1 className="font-display mt-3 text-4xl leading-[1.08] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
@@ -42,7 +46,7 @@ export default function FeedPage() {
                 key={item.id}
                 className="border-b border-black/10 dark:border-white/10 pb-12 flex flex-col md:flex-row md:items-start gap-6 md:gap-12"
               >
-                <div className="md:w-36 flex-shrink-0 text-xs font-mono text-ink-muted uppercase tracking-wider">
+                <div className="md:w-36 flex-shrink-0 text-xs font-display text-ink-muted uppercase tracking-wider">
                   <p>{item.date}</p>
                   <span className="mt-2 inline-block rounded border border-black/10 dark:border-white/15 px-2 py-0.5 text-[10px] text-foreground">
                     {item.tag}

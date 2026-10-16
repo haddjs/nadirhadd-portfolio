@@ -38,7 +38,7 @@ export default function EditorialHero({
           <div className="flex flex-col justify-center">
             <motion.p
               variants={staggerItem}
-              className="text-xs uppercase font-mono tracking-[0.22em] text-ink pt-12"
+              className="text-xs uppercase font-display tracking-[0.22em] text-ink pt-12"
             >
               <span className="font-bold">{name}</span> — {role}
             </motion.p>
@@ -55,7 +55,7 @@ export default function EditorialHero({
               variants={staggerItem}
               className="hidden mt-8 lg:flex flex-col sm:flex-row items-start sm:items-center gap-3 border-l-2 border-black dark:border-white pl-4 py-1"
             >
-              <span className="font-mono text-md uppercase tracking-wider text-foreground font-semibold">
+              <span className="font-display text-md uppercase tracking-wider text-foreground font-semibold">
                 Now —
               </span>
               <p className="text-md md:text-base text-ink-muted leading-relaxed">

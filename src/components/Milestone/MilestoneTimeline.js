@@ -42,7 +42,7 @@ function HorizontalTimeline({ items }) {
               </div>
 
               {/* Date Badge */}
-              <time className="mt-3 text-xs font-mono text-ink-muted">
+              <time className="mt-3 text-xs font-display text-ink-muted">
                 {new Date(item.start_date).toLocaleDateString("en-US", {
                   month: "short",
                   year: "numeric",
@@ -134,9 +134,16 @@ const MilestoneTimeline = ({ milestones = [] }) => {
                               ? item.url
                               : `/work/${item.url}`
                           }
-                          className="hover:opacity-80 hover:text-lg transition-all duration-150"
+                          target={
+                            item.url.startsWith("http://") ||
+                            item.url.startsWith("https://")
+                              ? "_blank"
+                              : "_self"
+                          }
+                          className="group hover:opacity-80 transition-opacity duration-150 underline"
                         >
-                          {`${item.company_name || item.title} ↗`}
+                          {`${item.company_name || item.title}`}{" "}
+                          <RollingText text="↗" />
                         </Link>
                       ) : (
                         item.company_name || item.title

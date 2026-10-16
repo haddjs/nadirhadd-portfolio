@@ -47,7 +47,7 @@ function ProjectCard({ project, index, total }) {
       {/* Main Grid Content */}
       <div className="relative z-10 mx-auto w-full max-w-full px-6 md:px-20 pt-12 md:pt-20 pb-8 flex-1 flex flex-col justify-between">
         {/* Top Header Row */}
-        <div className="flex items-center justify-between border-b border-white/10 pb-6 text-xs font-mono tracking-widest uppercase">
+        <div className="flex items-center justify-between border-b border-white/10 pb-6 text-xs font-display tracking-widest uppercase">
           <div className="flex items-center gap-3">
             <span
               className="inline-block h-2 w-2 rounded-full"
@@ -69,13 +69,6 @@ function ProjectCard({ project, index, total }) {
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-12 items-center my-auto py-8">
           {/* Left Column: Project Info & Enter CTA */}
           <div className="lg:col-span-5 flex flex-col items-start">
-            <p
-              className="text-xs font-mono uppercase tracking-[0.2em]"
-              style={{ color: theme.accent }}
-            >
-              Case Study
-            </p>
-
             <h3 className="font-display mt-2 text-3xl font-medium tracking-tight text-white md:text-5xl">
               {project.title}
             </h3>
@@ -91,7 +84,7 @@ function ProjectCard({ project, index, total }) {
               {project.tech_stacks.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-mono text-white/80"
+                  className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-display text-white/80"
                 >
                   {tech}
                 </span>
@@ -156,18 +149,13 @@ export default function StackedWorkSection({ projects = [] }) {
       {/* Section Header */}
       <div className="mx-auto w-full max-w-full px-6 pt-20 pb-10 md:px-20 flex flex-col md:flex-row md:items-end justify-between gap-6 border-t border-black/10 dark:border-white/10">
         <div>
-          <p className="text-xs font-mono uppercase tracking-[0.24em] text-ink-muted">
+          <p className="text-xs font-display uppercase tracking-[0.24em] text-ink-muted">
             Selected Works
           </p>
           <h2 className="font-display mt-2 text-3xl font-medium tracking-tight text-foreground md:text-5xl">
             Featured Projects
           </h2>
         </div>
-
-        <p className="max-w-md text-sm text-ink-muted leading-relaxed">
-          Production front-end engineering, ERP workflows, ATS tooling, and
-          component-driven web applications.
-        </p>
       </div>
 
       {/* Stacked Project Cards */}
