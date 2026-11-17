@@ -242,7 +242,7 @@ export const projects = [
 export const milestones = [
   {
     id: 1,
-    kind: "side_project",
+    kind: "side project",
     company_name: "Started Factify Animation",
     title: "Started Factify Animation YouTube channel with friend.",
     start_date: "2026-11",
