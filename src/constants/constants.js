@@ -242,6 +242,17 @@ export const projects = [
 export const milestones = [
   {
     id: 1,
+    kind: "side_project",
+    company_name: "Started Factify Animation",
+    title: "Started Factify Animation YouTube channel with friend.",
+    start_date: "2026-11",
+    description:
+      "Started YouTube channel with friend about fact, history, and stories with AI-powered animation.",
+    tech_stacks: ["Claude", "Blender", "Premiere Pro", "ElevenLabs"],
+    url: "https://www.youtube.com/@FactifyAnimation01",
+  },
+  {
+    id: 2,
     kind: "deployment",
     company_name: "Deployed Aulify",
     title:
@@ -261,7 +272,7 @@ export const milestones = [
     url: "/work/aulify",
   },
   {
-    id: 2,
+    id: 3,
     kind: "deployment",
     company_name: "Deployed Verity (Work Tracker) with Google Sync",
     title:
@@ -280,7 +291,7 @@ export const milestones = [
     url: "/work/pourity",
   },
   {
-    id: 3,
+    id: 4,
     kind: "deployment",
     company_name: "Deployed Pourity v1: Zero-backend ATS Resume Builder",
     title:
@@ -292,7 +303,7 @@ export const milestones = [
     url: "/work/verity",
   },
   {
-    id: 4,
+    id: 5,
     kind: "internship",
     company_name: "Finished WM Center Internship",
     title: "Front-end Developer Intern",
@@ -303,7 +314,7 @@ export const milestones = [
     tech_stacks: ["React", "NextJS", "REST APIs", "TailwindCSS"],
   },
   {
-    id: 5,
+    id: 6,
     kind: "publication",
     company_name: "IEEE ICoSEIT 2025",
     title:
@@ -316,7 +327,7 @@ export const milestones = [
     url: "https://doi.org/10.1109/ICoSEIT67010.2025.11290862",
   },
   {
-    id: 6,
+    id: 7,
     kind: "internship",
     company_name: "Finished Rastek ID Internship",
     title: "Front-end Developer Intern",
@@ -327,7 +338,7 @@ export const milestones = [
     tech_stacks: ["ReactJS", "Bootstrap", "REST APIs"],
   },
   {
-    id: 7,
+    id: 8,
     kind: "internship",
     company_name: "Finished Yayasan Pendidikan Telkom Internship",
     title: "Front-end Developer Intern",
@@ -338,7 +349,7 @@ export const milestones = [
     tech_stacks: ["VueJS", "NuxtJS", "Bootstrap", "Axios"],
   },
   {
-    id: 8,
+    id: 9,
     kind: "education",
     company_name: "Telkom University",
     title: "B.Sc. Computer Science",
@@ -375,15 +386,15 @@ export const uiLabExperiments = [
 export const feedItems = [
   {
     id: 1,
-    date: "Sep 2026",
-    title: "Deployed Verity (Work Tracker) with Google Sync",
-    tag: "Deployment",
+    date: "Nov 2026",
+    title: "Started YouTube Channel for AI-powered Animation",
+    tag: "Side Project",
     content:
-      "Launched Verity on September 21, 2026. Built a dual-mode job application and CV tracking dashboard with automated Google Drive & Sheets syncing via Auth.js v5 and a zero-dependency offline guest mode in localStorage.",
+      "Started YouTube channel with friend about fact, history, and stories with AI-powered animation.",
   },
   {
     id: 2,
-    date: "Sep 2026",
+    date: "Oct 2026",
     title: "Deployed Aulify Money Tracker v1",
     tag: "Deployment",
     content:
@@ -391,6 +402,14 @@ export const feedItems = [
   },
   {
     id: 3,
+    date: "Sep 2026",
+    title: "Deployed Verity (Work Tracker) with Google Sync",
+    tag: "Deployment",
+    content:
+      "Launched Verity on September 21, 2026. Built a dual-mode job application and CV tracking dashboard with automated Google Drive & Sheets syncing via Auth.js v5 and a zero-dependency offline guest mode in localStorage.",
+  },
+  {
+    id: 4,
     date: "July 2026",
     title: "Pourity v1: Zero-backend ATS Resume Builder",
     tag: "Side Project",
@@ -398,7 +417,7 @@ export const feedItems = [
       "Launched Pourity, a client-only CV and Cover Letter generator focused on standard A4 print margins, 100% ATS text readability, and localStorage instant persistence.",
   },
   {
-    id: 4,
+    id: 5,
     date: "May 2026",
     title: "Wrapping up 6-month ERP Internship at WM Center",
     tag: "Milestone",
